@@ -3,5 +3,5 @@ const adjs = [
     "weird","big","wonky"
 ];
 const mediums = [
-    "pen", "pencil", "paint",
+    "pen", "pencil", "paint" "Watercolor",
 ];
