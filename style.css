@@ -8,18 +8,30 @@ body {
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Kb0HIaw2-DzVIsN6f-Ixp4PWIi0Jh9I63Q&s);
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
 }
 .container {
+    display:inline-block;
+    width: 1200px;
         text-align: center;
-        background-color: #fff;
-        padding: 20px;
+        background-color: #ffffff6e;
+        
         border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    }
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-
+    position: relative;
+            top: -200px;
+}
     
 header {
     padding-top:30px;
@@ -39,8 +51,7 @@ main {
     height: 400px;
     text-align: center;
     padding-top: 80px;
-    padding-left: 240px;
-    padding-right: 240px;
+   
 }
 
 footer {
@@ -54,6 +65,7 @@ h1 {
     font-size: 20x;
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
+    padding-right: 800px;
 }
 p {
     font-size: 18px;
@@ -62,7 +74,8 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 a {
-    color: white;
+    
+    color: rgb(236, 213, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -78,29 +91,55 @@ footer p {
     text-align: center;
     color: rgb(238, 74, 253);
 }
-.maps {
-    padding-bottom: 100px;
 
-}
-.box1 {
-    background-color: burlywood;
-    margin-right: 330px;
-    width: 400px;
-    height: 250px;
-}
-.box2 {
-    background-color: rgb(231, 128, 227);
-    margin-left: 330px;
-    width: 400px;
-    height: 250px;
-}
-.box3 {
-    background-color: rgb(61, 108, 173);
-    margin-right: 330px;
-    width: 400px;
-    height: 250px;
+    
+.box {
+display:block;
+  width:33%;
+  float:left;
+  background:#000;
+  color:#fff;
+ 
+  text-align:center; 
+   position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #d93bcc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 #randomWord {
     font-size: 24px;
     margin-top: 20px;
-    color: #333;}
+    color: #333;
+}
+
+ .boxgroups {
+        padding-left: 700px;
+        position: relative;
+            top: -550px;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        margin-top: 70px;
+        
+    
+    }
+    
+    label {
+        font-size: 18px;
+        position: relative;
+            top: -300px;
+            padding-right: 30px;
+    }
+
+    .submit {
+       padding-bottom: 100px;
+    }

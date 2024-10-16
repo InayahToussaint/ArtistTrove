@@ -3,5 +3,8 @@ const adjs = [
     "weird","big","wonky"
 ];
 const mediums = [
-    "pen", "pencil", "paint" "Watercolor",
+    "pen", "pencil", "paint", "watercolor",
 ];
+const nouns = [
+    "house", "mountain", "car", "shoe"
+]
