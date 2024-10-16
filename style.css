@@ -4,62 +4,158 @@ html{
 
 
 
-body {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Kb0HIaw2-DzVIsN6f-Ixp4PWIi0Jh9I63Q&s);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-}
-.container {
-    display:inline-block;
-    width: 1200px;
-        text-align: center;
-        background-color: #ffffff6e;
-        
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-    }
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     position: relative;
-            top: -200px;
+            
 }
     
-header {
-    padding-top:30px;
-    padding-top: 30px;
-    text-align: center;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+ 
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  
+  .sidebar {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    flex: 1 1 250px;
+    margin: 0.5rem;
+  }
+
+ 
+  .content {
+    background-color: #e8e8e8;
+    padding: 1rem;
+    flex: 2 1 500px;
+    margin: 0.5rem;
+  }
+
+ 
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    /* For tablets and smaller devices */
+    .main-content {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      order: 2;
+    }
+
+    .content {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* For smartphones */
+    header {
+      font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+
+    footer {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
 nav {
-    background-color: rgba(255, 89, 230, 0.648);
-    text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    font-size: 1rem;
+      padding: 0.5rem;
 }
+    .main-content {
+      padding: 0.5rem;
+    }
 
-main {
-    background-color: rgb(113, 158, 227);
-    height: 400px;
-    text-align: center;
-    padding-top: 80px;
-   
-}
+    .sidebar,
+    .content {
+      margin: 0;
+      padding: 0.5rem;
+    }
+  }
+  .dropzone-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
 
-footer {
-    background-color: rgba(230, 230, 250, 0.712);
-    padding-top: 14px;
-    padding-bottom: 14px;
-}
+  .dropzone {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    background-color: lightgray;
+    border: 2px dashed #333;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .dropzone p {
+    margin: 0;
+  }
+
+  /* X button to remove drop zones */
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 2px 6px;
+  }
+
+  /* Add Drop Zone Button */
+  #addDropZone {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
 
 h1 {
     font-size: 20x;
@@ -94,52 +190,40 @@ footer p {
 
     
 .box {
-display:block;
-  width:33%;
-  float:left;
-  background:#000;
-  color:#fff;
- 
-  text-align:center; 
-   position: relative;
-    width: 100px;
-    height: 100px;
-    background-color: #d93bcc;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: grab;
+    display: inline-block;
+    display: grid;
+    
+  
 }
+
 #randomWord {
     font-size: 24px;
     margin-top: 20px;
     color: #333;
 }
 
- .boxgroups {
-        padding-left: 700px;
-        position: relative;
-            top: -550px;
+ 
+
+    .reset-btn {
+        background-color: lightblue;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
     }
 
-    input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-        margin-top: 70px;
-        
-    
+    .reset-btn:hover {
+        background-color: deepskyblue;
     }
     
-    label {
-        font-size: 18px;
-        position: relative;
-            top: -300px;
-            padding-right: 30px;
-    }
 
-    .submit {
-       padding-bottom: 100px;
-    }

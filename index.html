@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-<div class="container">
-
-
+    <!-- Layout Wrapper -->
+  <div class="wrapper">
+    
+    <!-- Header -->
     <header>
-        <img src="images/Icon.webp" alt="Logo for Website">
+      <h1>Nya's Website Layout</h1>
     </header>
-
     <nav>
         <a href="#">HOME</a>
         <a href="#">MENU</a>
@@ -23,53 +22,63 @@
         <a href="#">CONTACT</a>
     </nav>
 
-
-    <main>
-       
+    <!-- Main Content Area -->
+    <div class="main-content">
       
-      <div class="container">
-        <h1>ARTIST BLOCK?</h1>
-        <h1>Random Medium Generator</h1>
-        <h1>Choose Your Options</h1>
+      <!-- Content Section -->
+      <div class="content">
+        <h2>Main</h2>
+        
 
-    <form>
-        <label for="option1">
-            <input type="checkbox" id="option1" name="option1" value="Option 1"> Option 1
-        </label><br>
+  <button id="generateButton">Generate Word</button>
 
-        <label for="option2">
-            <input type="checkbox" id="option2" name="option2" value="Option 2"> Option 2
-        </label><br>
+ <!-- Reset Button -->
+ <button id="resetButton" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: red; color: white; border: none; cursor: pointer;">
+    Reset
+  </button>
 
-        <label for="option3">
-            <input type="checkbox" id="option3" name="option3" value="Option 3"> Option 3
-        </label><br>
+         <!-- Container for Drop Zones -->
+  <div class="dropzone-container" id="dropzoneContainer">
+    <!-- Added drop zones will appear here -->
+  </div>
 
-        <input type="submit" value="Submit">
-    </form>
-        <button id="generateButton">Generate Word</button>
+  <!-- Button to add new Drop Zones -->
+  <button id="addDropZone">Add Drop Zone</button>
 
-      <div class="boxgroups">  
-        <div class="box"><p id="randomMedium">Click generator for inspiration!!</p></div>
-        <div class="box"><p id="randomAdj">Click the generator. Do it now!</p></div>
-        <div class="box"><p id="randomNoun">Click</p></div>
       </div>
 
-     </div>
+      <!-- Side -->
+      <div class="sidebar">
+        <h2>Side</h2>
+         <!-- Draggable Boxes -->
+         <div class="box-container" id="boxContainer">
+     <div class="box" id="randomMedium"  draggable="true" >Medium!!
+            
+    </div>
+    <div class="box"  id="randomAdj"  draggable="true" >Adjective!! 
         
-    
-      
+    </div>
+    <div class="box"  id="randomNoun"  draggable="true" >Noun!!
+        </div>
         
-    </main> 
-    
-   
-    <footer>
-        <p>FOOTER</p>
-        <a href="mailto:inayaht03@gmail.com?Subject=Contact" target = "_new"> me
-        </a>
-    </footer>
+    </div>
 
-</div>
+      </div>
+    
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Footer &copy; 2024</p>
+      <a href="mailto:inayaht03@gmail.com?Subject=Contact" target = "_new"> me
+    </a>
+    </footer>
+  </div>
+
+
+
+
+
 <script src="words.js"></script>
 <script src="script.js"></script>
 </body>
