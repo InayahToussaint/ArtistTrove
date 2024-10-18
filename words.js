@@ -8,3 +8,12 @@ const mediums = [
 const nouns = [
     "house", "mountain", "car", "shoe"
 ]
+const times = [
+    "noon","dusk","sunset"
+];
+const colors = [
+    "magenta","blue","green"
+];
+const concepts = [
+    "abstract","realism","animated"
+];

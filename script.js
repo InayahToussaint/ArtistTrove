@@ -14,6 +14,12 @@ document.getElementById('generateButton').addEventListener('click', () => {
     document.getElementById('randomMedium').textContent = randomMedium;
     document.getElementById('randomAdj').textContent = randomAdj;
     document.getElementById('randomNoun').textContent = randomNoun;
+    const randomTime = getRandomWord(times);
+    const randomColor = getRandomWord(colors);
+    const randomConcept = getRandomWord(concepts);
+    document.getElementById('randomTime').textContent = randomTime;
+    document.getElementById('randomColor').textContent = randomColor;
+    document.getElementById('randomConcept').textContent = randomConcept;
 });
  // Get reference to the reset button
  const resetButton = document.getElementById('resetButton');
