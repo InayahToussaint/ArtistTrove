@@ -78,6 +78,8 @@ document.getElementById('generateButton').addEventListener('click', () => {
      newDropzone.appendChild(box); // Append the box to the dropzone
    });
 
+
+   
    // Add functionality to remove the drop zone in order to return the boxes
    const closeButton = newDropzone.querySelector('.close-btn');
    closeButton.addEventListener('click', () => {
@@ -93,3 +95,58 @@ document.getElementById('generateButton').addEventListener('click', () => {
 
  // Event listener for adding new drop zones
  addDropZoneButton.addEventListener('click', createDropZone);
+
+
+
+// Add dragstart event to each box to create a temporary copy
+boxes.forEach((box) => {
+  box.addEventListener("dragstart", (event) => {
+    // Create a new temporary copy for dragging
+    const newbox = box.cloneNode(true);
+    newbox.id = ""; // Remove ID to avoid duplicates
+
+    // Add styles to indicate it's a copy
+    newbox.style.position = "absolute";
+    newbox.style.opacity = "0.5";
+
+    // Append the copy to the body to make it draggable
+    document.body.appendChild(newbox);
+
+    // Set the new copy as the drag image
+    event.dataTransfer.setDragImage(newbox, 0, 0);
+
+    // Remove the temporary copy after drag ends
+    newbox.addEventListener("dragend", () => {
+      newbox.remove();
+    });
+
+    // Set the original element's text as the data to identify it
+    event.dataTransfer.setData("text/plain", box.innerText);
+  });
+});
+
+// Allow drop zones to accept dropped copies
+document.querySelectorAll(".dropzone").forEach((dropzone) => {
+  dropzone.addEventListener("dragover", (event) => {
+    event.preventDefault(); // Allow dropping
+  });
+
+  dropzone.addEventListener("drop", (event) => {
+    event.preventDefault();
+
+    // Get the text of the dragged box to know what was dropped
+    const boxText = event.dataTransfer.getData("text/plain");
+
+    // Find the original box with matching text to clone
+    const originalbox = [...boxes].find(
+      (box) => box.innerText === boxText
+    );
+
+    // Create a permanent copy of the dragged box
+    const finalbox = originalbox.cloneNode(true);
+    finalbox.id = ""; // Clear ID for uniqueness
+
+    // Append the permanent copy to the drop zone
+    dropzone.appendChild(finalbox);
+  });
+});

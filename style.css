@@ -190,6 +190,9 @@ footer p {
 
     
 .box {
+    flex: 1 1 30%;     /* Flex-grow, flex-shrink, and width basis */
+  max-width: 30%;    /* Ensures three boxes per row */
+  background-color: lightblue;
     width: 150px;
     height: 150px;
     margin: 20px;
@@ -202,8 +205,14 @@ footer p {
     cursor: grab;
     display: inline-block;
     display: grid;
-    
+
   
+}
+.box-container {
+    display: flex;
+  flex-wrap: wrap;   /* Allows wrapping to next line */
+  gap: 10px;         /* Optional: adds spacing between boxes */
+
 }
 
 #randomWord {
