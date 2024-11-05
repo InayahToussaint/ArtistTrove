@@ -150,7 +150,7 @@ nav {
   /* Add Drop Zone Button */
   #addDropZone {
     padding: 10px 20px;
-    background-color: green;
+    background-color: seagreen;
     color: white;
     border: none;
     cursor: pointer;
@@ -192,11 +192,11 @@ footer p {
 .box {
     flex: 1 1 30%;     /* Flex-grow, flex-shrink, and width basis */
   max-width: 30%;    /* Ensures three boxes per row */
-  background-color: lightblue;
+  background-color: cornflowerblue;
     width: 150px;
     height: 150px;
     margin: 20px;
-    background-color: lightblue;
+    background-color: cornflowerblue;
     text-align: center;
     line-height: 150px;
     font-size: 20px;
