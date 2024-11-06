@@ -1,238 +1,265 @@
-html{
-    height: 100%;
-}
-
-
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-            
-}
-    
+/* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+html {
+  height: 100%;
+}
 
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff; /* Optional: Set a background color */
+}
 
- 
-  .main-content {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-  }
+/* Header Styles */
+header {
+  background-color: #434141;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
 
-  
-  .sidebar {
-    background-color: #f4f4f4;
-    padding: 1rem;
-    flex: 1 1 250px;
-    margin: 0.5rem;
-  }
-
- 
-  .content {
-    background-color: #e8e8e8;
-    padding: 1rem;
-    flex: 2 1 500px;
-    margin: 0.5rem;
-  }
-
- 
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  /* Images */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    /* For tablets and smaller devices */
-    .main-content {
-      flex-direction: column;
-    }
-
-    .sidebar {
-      order: 2;
-    }
-
-    .content {
-      order: 1;
-    }
-  }
-
-  @media (max-width: 480px) {
-    /* For smartphones */
-    header {
-      font-size: 1.2rem;
-      padding: 0.5rem;
-    }
-
-    footer {
-      font-size: 1rem;
-      padding: 0.5rem;
-    }
+/* Navigation Styles */
 nav {
-    font-size: 1rem;
-      padding: 0.5rem;
+  background-color: #333; /* Dark background for the navbar */
+  padding: 20px 0; /* Add padding to make it bigger */
 }
-    .main-content {
-      padding: 0.5rem;
-    }
 
-    .sidebar,
-    .content {
-      margin: 0;
-      padding: 0.5rem;
-    }
-  }
-  .dropzone-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-
-  .dropzone {
-    width: 200px;
-    height: 150px;
-    margin: 10px;
-    background-color: lightgray;
-    border: 2px dashed #333;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .dropzone p {
-    margin: 0;
-  }
-
-  /* X button to remove drop zones */
-  .close-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: red;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 2px 6px;
-  }
-
-  /* Add Drop Zone Button */
-  #addDropZone {
-    padding: 10px 20px;
-    background-color: seagreen;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-
-h1 {
-    font-size: 20x;
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-right: 800px;
+nav ul {
+  display: flex; /* Use flexbox for horizontal distribution */
+  justify-content: space-evenly; /* Even spacing between items */
+  list-style: none; /* Remove default list styling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
+
+nav ul li {
+  margin: 0 15px; /* Optional: spacing between items */
+}
+
+nav ul li a {
+  color: white; /* Link text color */
+  text-decoration: none; /* Remove underlines */
+  padding: 10px 20px; /* Padding around links */
+  display: block; /* Block-level for padding to work */
+  transition: background-color 0.3s; /* Smooth hover effect */
+  font-size: 18px; /* Increased font size */
+}
+
+nav ul li a:hover {
+  background-color: #555; /* Darker background on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Main Content Styles */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height layout */
+}
+
+.main-content {
+  flex: 1; /* Takes up available space */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  padding: 1rem; /* Padding around main content */
+}
+
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  flex: 1 1 250px; /* Responsive flex sizing */
+  margin: 0.5rem; /* Margin around sidebar */
+}
+
+.content {
+  background-color: #e8e8e8;
+  padding: 1rem;
+  flex: 2 1 500px; /* Responsive flex sizing */
+  margin: 0.5rem; /* Margin around content */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  font-size: 25px; /* Adjust font size as needed */
+  color: #333;
+  background-color: #e8e8e8; /* Optional: Background color */
+  border: 2px solid #333; /* Optional: Border around toolbox */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column; /* Stack content on small screens */
+  }
+
+  .sidebar {
+      order: 2; /* Order for small screens */
+  }
+
+  .content {
+      order: 1; /* Order for small screens */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: center; /* Center items */
+  }
+
+  nav ul li a {
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      font-size: 1.2rem;
+      padding: 0.5rem; /* Smaller padding */
+  }
+
+  footer {
+      font-size: 1rem;
+      padding: 0.5rem; /* Smaller padding */
+  }
+}
+
+/* Drop Zone Styles */
+.dropzone-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.dropzone {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  background-color: lightgray;
+  border: 2px dashed #333;
+  position: relative; /* This is important to position the close button relative to the drop zone */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropzone p {
+  margin: 0;
+}
+
+
+/* Close Button Styles */
+.close-btn {
+  position: absolute; /* Absolute positioning within the drop zone */
+  top: 5px;           /* Position it at the top of the drop zone */
+  right: 5px;         /* Position it at the right of the drop zone */
+  background-color: #ffd676; /* Red color for the button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 50%;  /* Makes it round like an 'X' button */
+}
+
+.close-btn:hover {
+  background-color: #ff4500; /* Darker red on hover */
+
+}
+
+/* Add Drop Zone Button */
+#addDropZone {
+  padding: 10px 20px;
+  background-color: seagreen;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Box Styles */
+.box {
+  flex: 1 1 30%; /* Flex sizing for boxes */
+  max-width: 30%; /* Max width for boxes */
+  background-color: cornflowerblue;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  text-align: center;
+  line-height: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid black;
+  cursor: grab;
+}
+
+/* Box Container Styles */
+.box-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 10px; /* Spacing between boxes */
+}
+
+/* Miscellaneous Styles */
+h1  {
+    font-size: 48px;           /* Makes the title bigger */
+    font-weight: bold;         /* Makes the text bold */
+    color: #fff;               /* White color for text */
+    text-align: center;        /* Centers the title */
+    letter-spacing: 2px;       /* Adds space between the letters */
+    font-family: 'Arial', sans-serif;  /* Change to a more stylish font */
+    text-transform: uppercase; /* Makes the title uppercase */
+    padding: 20px 0;           /* Adds vertical padding for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for effect */
+  }
+
 p {
-    font-size: 18px;
-    text-align: center;
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-}
-a {
-    
-    color: rgb(236, 213, 255);
-    font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: whitesmoke;
 }
 
-nav a {
-    text-decoration: none;
-    font-size: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
+ a {
+  color: rgb(214, 214, 214);
+  font-size: 10px;
+  text-decoration: underline;
+  
 }
 
 footer p {
-    font-size: 10px;
-    text-align: center;
-    color: rgb(238, 74, 253);
-}
-
-    
-.box {
-    flex: 1 1 30%;     /* Flex-grow, flex-shrink, and width basis */
-  max-width: 30%;    /* Ensures three boxes per row */
-  background-color: cornflowerblue;
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-    background-color: cornflowerblue;
-    text-align: center;
-    line-height: 150px;
-    font-size: 20px;
-    font-weight: bold;
-    border: 2px solid black;
-    cursor: grab;
-    display: inline-block;
-    display: grid;
-
-  
-}
-.box-container {
-    display: flex;
-  flex-wrap: wrap;   /* Allows wrapping to next line */
-  gap: 10px;         /* Optional: adds spacing between boxes */
-
+  font-size: 16px;
+  text-align: center;
+  color: cornflowerblue;
 }
 
 #randomWord {
-    font-size: 24px;
-    margin-top: 20px;
-    color: #333;
+  font-size: 24px;
+  margin-top: 20px;
+  color: #333;
 }
-
- 
-
-    .reset-btn {
-        background-color: lightblue;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .reset-btn:hover {
-        background-color: deepskyblue;
-    }
-    
+/* Centering for "Construction Site" */
+h2 {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 10vh; /* Optional: Full viewport height */
+  text-align: center;
+  font-size: 28px; /* Adjust font size as needed */
+  color: #333; /* Color of the text */
+  font-weight: bold;
+}
 

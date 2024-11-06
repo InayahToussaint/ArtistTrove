@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nya's Website</title>
+    <title>illTrove</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,13 +13,15 @@
     
     <!-- Header -->
     <header>
-      <h1>Nya's Website Layout</h1>
+      <h1>illTrove</h1> 
     </header>
     <nav>
-        <a href="#">HOME</a>
-        <a href="#">MENU</a>
-        <a href="#">GENERATOR</a>
-        <a href="#">CONTACT</a>
+     <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="instructions.html">INSTRUCTIONS</a></li>
+        <li><a href="communityworks.html">COMMUNITY WORKS</a></li>
+        <li><a href="aboutme.html">ABOUT</a></li>
+        </ul>
     </nav>
 
     <!-- Main Content Area -->
@@ -27,10 +29,10 @@
       
       <!-- Content Section -->
       <div class="content">
-        <h2>Main</h2>
+        <h2>Artist Constrution Site</h2>
         
 
-  <button id="generateButton">Generate Word</button>
+  
 
  <!-- Reset Button -->
  <button id="resetButton" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: red; color: white; border: none; cursor: pointer;">
@@ -43,13 +45,20 @@
   </div>
 
   <!-- Button to add new Drop Zones -->
-  <button id="addDropZone">Add Drop Zone</button>
+  <div id="dropzoneControl">
+    <label for="dropzoneInput">Number of Drop Zones:</label>
+<input type="number" id="dropzoneInput" min="1" max="12" placeholder="Enter a number" />
+<button id="generateDropZonesButton">Generate Drop Zones</button>
+  </div>
+  
+  
 
       </div>
 
       <!-- Side -->
       <div class="sidebar">
-        <h2>Side</h2>
+        <h2>Tool Box</h2>
+        <button id="generateButton">Generate Word</button>
          <!-- Draggable Boxes -->
          <div class="box-container" id="boxContainer">
      <div class="box" id="randomMedium"  draggable="true" >Medium!!
@@ -66,7 +75,7 @@
         <div class="box" id="randomColor"  draggable="true" >Color!!
             
         </div>
-        <div class="box" id="randomConcept"  draggable="true" >Concpets!!
+        <div class="box" id="randomConcept"  draggable="true" >Concepts!!
             
         </div>
     </div>
@@ -77,9 +86,9 @@
 
     <!-- Footer -->
     <footer>
-      <p>Footer &copy; 2024</p>
-      <a href="mailto:inayaht03@gmail.com?Subject=Contact" target = "_new"> me
-    </a>
+      <a href="mailto:bookinginayahtoussaint@gmail.com?Subject=Contact" target = "_new"> CONTACT 
+    </a> 
+    <p>illTrove &copy; 2024</p>
     </footer>
   </div>
 
