@@ -3,17 +3,102 @@ const adjs = [
     "weird","big","wonky"
 ];
 const mediums = [
-    "pen", "pencil", "paint", "watercolor",
+    "oil paint", "acrylic", "watercolor", "ink", "pencil", "charcoal", "pastel",
+  "digital", "printmaking", "sculpture", "ceramic", "collage", "mixed media",
+  "photography", "tempera", "spray paint", "encaustic", "fiber art", "glass",
+  "wood carving", "metalwork", "papier-mâché", "3D printing", "installation",
+  "film", "video art", "performance", "graffiti", "tapestry", "quilting",
+  "calligraphy", "animation", "gouache", "screen printing", "monotype", "linocut",
+  "etching", "stained glass", "marbling", "stone carving", "sand art", "found object",
+  "embroidery", "knitting", "weaving", "body art", "mosaic", "silk painting",
+  "digital painting", "clay modeling", "jewelry making", "leatherwork", "puppet making",
+  "cyanotype", "sumi-e", "tattoo art", "origami", "relief", "fresco", "gold leaf",
+  "encaustic painting", "alabaster carving", "dyed fabric", "woodburning", "pyrography",
+  "papier collé", "stoneware", "plaster casting", "gel print", "found photography",
+  "textile art", "light installation", "resin art", "sand sculpture", "airbrushing",
+  "knife painting", "digital collage", "video installation", "sound art", "welding",
+  "soap carving", "scenography", "assemblage", "enamel painting", "ink wash", "acrylic pouring",
+  "pet portraiture", "photo collage", "ceramic glazing", "screen printing", "ink sketching",
+  "pen and ink", "chalk", "recycled materials", "body cast", "architectural drawing",
+  "face painting", "blacksmithing", "gesso work", "portrait sculpture",
 ];
 const nouns = [
-    "house", "mountain", "car", "shoe"
+    "mountain", "ocean", "star", "river", "flower", "leaf", "forest",
+  "bird", "sun", "moon", "planet", "cloud", "rain", "wave", "tree", "rock",
+  "fish", "insect", "animal", "feather", "shell", "valley", "desert", "ice",
+  "snow", "lightning", "fire", "sky", "sand", "hill", "earth", "pebble",
+  "branch", "mushroom", "meadow", "cave", "path", "creek", "canyon", "dust",
+  "fog", "swamp", "waterfall", "island", "crystal", "volcano", "seed",
+  "vine", "cliff", "beach", "pond", "stream", "glacier", "wind", "echo",
+  "root", "bark", "lichen", "stone", "sunbeam", "shadow", "dew", "mist",
+  "rainbow", "mount", "petal", "tide", "breeze", "starfish", "peak", "foam",
+  "moss","whisper", "epiphany", "labyrinth", "echo", "mirage", "embers", "sanctuary",
+  "philosopher", "relic", "glimmer", "pilgrimage", "chimera", "reverie", "alchemy",
+  "solace", "enigma", "specter", "voyage", "atlas", "cipher", "paradox", "relic",
+  "fortress", "nectar", "shadow", "haven", "omen", "silhouette", "phantom", "reverence",
+  "crescent", "quicksilver", "rift", "fragment", "oblivion", "ember", "eclipse",
+  "labyrinthine", "veil", "artifact", "cascade", "rift", "nebula", "horizon", "echo",
+  "threshold", "wildfire", "constellation", "monarch", "prism", "odyssey", "oracle",
+  "veil", "aurora", "illusion", "solstice", "labyrinth", "zenith", "melancholy", "quarry",
+  "foreshadow", "whirlpool", "timber", "paradise", "rift", "penumbra", "cataclysm",
+  "mausoleum", "nimbus", "monolith", "omen", "shroud", "bastion", "artifact", "embers",
+  "grimoire", "lighthouse", "labyrinth", "ripple", "empathy", "spectrum", "eclipse",
+  "echo", "basilisk", "embers", "mosaic", "refrain", "oracle", "labyrinth", "relic",
+  "synergy", "coda", "stardust", "labyrinth", "synthesis", "charade", "paradox",
+  "iridescence", "celestial", "liminality", "vortex", "renaissance", "bravado",
+  "odyssey", "folklore"
 ]
 const times = [
-    "noon","dusk","sunset"
+   "dawn", "noon", "afternoon", "sunset", "dusk", "nightfall", "midnight", "twilight",
+  "daybreak", "sunrise", "evening", "high noon", "early morning", "late night",
+  "afternoon tea time", "mid-afternoon", "after dark", "before sunrise", "golden hour",
+  "witching hour", "past midnight", "brunch time", "predawn", "cocktail hour",
+  "mid-morning", "after hours", "sunlit afternoon", "moonrise", "late afternoon",
+  "early dusk", "late evening", "daylight", "high tide", "low tide", "night",
+  "morning light", "pre-sunset", "midday", "first light", "darkness", "blue hour",
+  "stormy afternoon", "sunny morning", "cool evening", "clear night", "foggy dawn",
+  "humid afternoon", "rainy night", "sun-dappled noon", "gloaming", "early hours",
+  "starlit midnight", "rainy dusk", "summer evening", "autumn morning", "winter dawn",
+  "spring twilight", "foggy noon", "windy afternoon", "frosty night", "snowy morning",
+  "icy dawn", "misty dusk", "sunny afternoon", "crisp morning", "soft twilight",
+  "heavy rain evening", "fiery sunset", "drizzling dawn", "cloudless day", "blizzard night",
+  "torrential rain", "freezing midnight", "scorching noon", "sunny evening", "stormy midnight",
+  "sunshine dawn", "balmy afternoon", "breezy morning", "thunderous night", "luminous noon",
+  "radiant morning", "mellow dusk", "calm evening", "drizzly dusk", "glowing sunrise",
+  "gentle afternoon", "wild twilight", "thunderstorm", "wind-blown sunset", "fiery dusk",
+  "serene nightfall", "morning frost"
 ];
 const colors = [
-    "magenta","blue","green"
+    "red", "blue", "yellow", "green", "purple", "pink", "orange", "brown",
+  "black", "white", "gray", "teal", "lavender", "maroon", "navy", "turquoise",
+  "coral", "magenta", "lime", "indigo", "amber", "cyan", "ivory", "beige",
+  "mint", "crimson", "peach", "salmon", "olive", "bronze", "gold", "silver",
+  "cream", "charcoal", "chocolate", "rose", "tan", "jade", "sapphire", "plum",
+  "aqua", "wine", "moss", "mahogany", "periwinkle", "cerulean", "rust", "ochre",
+  "violet", "chartreuse", "fuchsia", "emerald", "copper", "steel", "lilac",
+  "slate", "sepia", "mustard", "sky blue", "cobalt", "mulberry", "brick",
+  "mint green", "caramel", "pumpkin", "lavender blush", "coffee", "clay",
+  "buttercup", "dandelion", "royal blue", "tangerine", "stormy gray", "powder blue",
+  "blush pink", "eggshell", "deep sea", "amethyst", "apricot", "hot pink",
+  "auburn", "taupe", "night sky", "smoke gray", "saffron", "seafoam", "ivory",
+  "marigold", "candy apple", "blood red", "pale pink", "soft beige", "steel blue",
+  "bubblegum", "grape", "pale peach", "driftwood", "misty blue", "mango"
 ];
 const concepts = [
-    "abstract","realism","animated"
+    "identity", "memory", "love", "loss", "freedom", "oppression", "nature", 
+  "urbanization", "isolation", "community", "justice", "forgiveness", "power",
+  "resilience", "tradition", "innovation", "transformation", "decay", "growth",
+  "rebirth", "nostalgia", "futurism", "fantasy", "realism", "abstraction",
+  "innocence", "knowledge", "faith", "skepticism", "hope", "despair", "chaos",
+  "order", "paradox", "symbiosis", "division", "unity", "metamorphosis", "reflection",
+  "distortion", "mythology", "spirituality", "materialism", "impermanence", "eternity",
+  "migration", "belonging", "alienation", "dualism", "symbolism", "ritual", "celebration",
+  "destruction", "creation", "voyage", "journey", "dream", "reality", "desire", "fear",
+  "innate beauty", "suffering", "joy", "transcendence", "pain", "redemption", "intimacy",
+  "distance", "truth", "illusion", "memory", "destiny", "innocence lost", "contemplation",
+  "protest", "connection", "disconnect", "persistence", "displacement", "vulnerability",
+  "strength", "fragility", "heritage", "ancestry", "ritual", "fate", "the unknown",
+  "survival", "renewal", "duality", "humor", "melancholy", "peace", "turmoil", "harmony",
+  "rhythm", "balance", "identity", "illusion", "exposure", "submersion", "emancipation",
+  "overcoming", "self-discovery", "courage"
 ];
