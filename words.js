@@ -1,6 +1,25 @@
 // List of words to choose from
 const adjs = [
-    "weird","big","wonky"
+    "weird","big","wonky", "abstract", "vibrant", "melancholic", "whimsical", "intricate", 
+  "ethereal", "bold", "serene", "chaotic", "nostalgic", 
+  "gritty", "majestic", "subtle", "dynamic", "somber", 
+  "playful", "mystical", "radiant", "delicate", "enigmatic", 
+  "harmonious", "tense", "expressive", "opulent", "haunting", 
+  "graceful", "evocative", "moody", "layered", "saturated", 
+  "dark", "minimal", "organic", "dreamlike", "raw", 
+  "pristine", "geometric", "textured", "ornate", "fluid", 
+  "aggressive", "industrial", "lyrical", "pensive", "earthy", 
+  "charming", "monochromatic", "quirky", "refined", "vintage", 
+  "edgy", "modern", "futuristic", "ancient", "fantastical", 
+  "elegant", "ethnic", "soft", "intense", "bold", 
+  "peculiar", "transcendent", "reflective", "colorful", "stark", 
+  "neutral", "sleek", "powerful", "mellow", "shimmering", 
+  "luminous", "vivid", "complex", "grungy", "angular", 
+  "sinister", "uplifting", "rough", "polished", "fragile", 
+  "spiritual", "calm", "vulnerable", "provocative", "sensual", 
+  "iconic", "airy", "timeless", "ethereal", "jubilant", 
+  "enigmatic", "cozy", "brilliant", "somber", "fiery", 
+  "glossy", "tranquil", "symmetrical", "dystopian", "romantic"
 ];
 const mediums = [
     "oil paint", "acrylic", "watercolor", "ink", "pencil", "charcoal", "pastel",
