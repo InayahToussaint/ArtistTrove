@@ -59,6 +59,7 @@
       <div class="sidebar">
         <h2>Tool Box</h2>
         <button id="generateButton">Generate Word</button>
+        
          <!-- Draggable Boxes -->
          <div class="box-container" id="boxContainer">
      <div class="box" id="randomMedium"  draggable="true" >Medium!!
@@ -75,7 +76,7 @@
         <div class="box" id="randomColor"  draggable="true" >Color!!
             
         </div>
-        <div class="box" id="randomConcept"  draggable="true" >Concepts!!
+        <div class="box" id="randomConcept"  draggable="true" >Concept!!
             
         </div>
     </div>
@@ -83,6 +84,17 @@
       </div>
     
     </div>
+
+    <div class="comments-container">
+      <h2>Comments</h2>
+      <div class="comment-box">
+          <textarea id="newComment" placeholder="Add a comment..."></textarea>
+          <button id="submitComment">Post</button>
+      </div>
+      <div id="commentsSection" class="comments-section">
+          <!-- Comments will be appended here dynamically -->
+      </div>
+  </div>
 
     <!-- Footer -->
     <footer>

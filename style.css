@@ -92,14 +92,15 @@ footer {
 
 /* Button Styles */
 button {
+  margin: 20px 0;
   padding: 10px 20px;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  font-size: 25px; /* Adjust font size as needed */
+  font-size: 25px;
   color: #333;
-  background-color: #e8e8e8; /* Optional: Background color */
-  border: 2px solid #333; /* Optional: Border around toolbox */
+  background-color: #e8e8e8;
+  border: 2px solid #333;
+  cursor: pointer;
+  display: block;
+  
 }
 
 /* Responsive Styles */
@@ -146,15 +147,16 @@ button {
 }
 
 .dropzone {
-  width: 200px;
-  height: 150px;
-  margin: 10px;
-  background-color: lightgray;
-  border: 2px dashed #333;
-  position: relative; /* This is important to position the close button relative to the drop zone */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200px; /* Maintain enough space for the box */
+  height: 150px; /* Match the height of the box */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center the box horizontally */
+  align-items: center; /* Center the box vertically */
+  background-color: lightgray; /* Background for drop zone */
+  border: 2px dashed #333; /* Dashed border */
+  position: relative; /* Position for the close button */
+  overflow: hidden; /* Prevent overflow issues */
+  box-sizing: border-box; /* Ensure dimensions include border and padding */
 }
 
 .dropzone p {
@@ -193,18 +195,20 @@ button {
 
 /* Box Styles */
 .box {
-  flex: 1 1 30%; /* Flex sizing for boxes */
-  max-width: 30%; /* Max width for boxes */
+  flex: 0 0 auto; /* Prevent the box from resizing */
+  width: 150px; /* Ensure fixed width */
+  height: 150px; /* Ensure fixed height */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  text-align: center; /* Ensure text alignment */
+  font-size: 16px; /* Adjust font size to fit */
+  font-weight: bold; /* Bold text */
+  overflow: hidden; /* Prevent text overflow */
   background-color: cornflowerblue;
-  width: 150px;
-  height: 150px;
-  margin: 20px;
-  text-align: center;
-  line-height: 150px;
-  font-size: 20px;
-  font-weight: bold;
   border: 2px solid black;
   cursor: grab;
+  margin: 0; /* Ensure no extra margin */
 }
 
 /* Box Container Styles */
@@ -263,3 +267,94 @@ h2 {
   font-weight: bold;
 }
 
+/* Image container setup */
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;  /* Ensure the container doesn't exceed the page width */
+  justify-content: space-evenly;  /* Distribute images evenly */
+}
+
+/* Default size for images to be visible but not too big */
+.styled-image {
+  width: 200px;  /* Adjust the width to your preference */
+  height: auto;  /* Maintain aspect ratio without cropping */
+  object-fit: contain; /* Ensures the entire image fits without being cropped */
+  border-radius: 8px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Optional: Add a hover effect for interactivity */
+.styled-image:hover {
+  transform: scale(1.05); /* Slight zoom effect when hovered */
+}
+
+.comments-container {
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.comment-box {
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  height: 50px;
+}
+
+
+
+button:hover {
+  background-color: #ff9bdc;
+}
+
+.comments-section {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+.comment {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.comment .comment-body {
+  margin-bottom: 5px;
+}
+
+.comment .comment-actions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.comment .reply {
+  cursor: pointer;
+}
+
+.comment .like, .comment .delete {
+  cursor: pointer;
+}
+
+.reply-box {
+  display: none;
+  margin-left: 20px;
+  padding-top: 10px;
+}

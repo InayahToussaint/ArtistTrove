@@ -135,3 +135,139 @@ boxes.forEach(box => {
     e.dataTransfer.setData('text', box.id);
   });
 });
+
+const submitCommentBtn = document.getElementById("submitComment");
+const newCommentInput = document.getElementById("newComment");
+const commentsSection = document.getElementById("commentsSection");
+
+// Load comments from localStorage on page load
+let comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+// Function to create a comment element
+function createComment(comment, isReply = false) {
+    const commentDiv = document.createElement("div");
+    commentDiv.classList.add("comment");
+    commentDiv.id = `comment-${comment.id}`;
+    
+    const commentBody = document.createElement("div");
+    commentBody.classList.add("comment-body");
+    commentBody.textContent = comment.text;
+
+    const commentActions = document.createElement("div");
+    commentActions.classList.add("comment-actions");
+    
+    const likeBtn = document.createElement("span");
+    likeBtn.classList.add("like");
+    likeBtn.textContent = `👍 ${comment.likes}`;
+    likeBtn.addEventListener("click", () => likeComment(comment.id));
+    
+    const deleteBtn = document.createElement("span");
+    deleteBtn.classList.add("delete");
+    deleteBtn.textContent = "🗑️";
+    deleteBtn.addEventListener("click", () => deleteComment(comment.id));
+    
+    const replyBtn = document.createElement("span");
+    replyBtn.classList.add("reply");
+    replyBtn.textContent = "Reply";
+    replyBtn.addEventListener("click", () => toggleReplyBox(comment.id));
+
+    commentActions.appendChild(likeBtn);
+    commentActions.appendChild(replyBtn);
+    commentActions.appendChild(deleteBtn);
+    
+    const replyBox = document.createElement("div");
+    replyBox.classList.add("reply-box");
+    
+    const replyInput = document.createElement("textarea");
+    replyInput.placeholder = "Write a reply...";
+    const replySubmitBtn = document.createElement("button");
+    replySubmitBtn.textContent = "Post Reply";
+    replySubmitBtn.addEventListener("click", () => postReply(comment.id, replyInput.value));
+    
+    replyBox.appendChild(replyInput);
+    replyBox.appendChild(replySubmitBtn);
+    
+    commentDiv.appendChild(commentBody);
+    commentDiv.appendChild(commentActions);
+    commentDiv.appendChild(replyBox);
+    
+    // If it's a reply, we add it under the parent comment
+    if (isReply) {
+        const parentComment = document.getElementById(`comment-${comment.parentId}`);
+        parentComment.appendChild(commentDiv);
+    } else {
+        commentsSection.appendChild(commentDiv);
+    }
+}
+
+// Function to post a new comment
+function postComment() {
+    const text = newCommentInput.value.trim();
+    if (text === "") return;
+
+    const newComment = {
+        id: Date.now(),
+        text: text,
+        likes: 0,
+        parentId: null
+    };
+
+    comments.push(newComment);
+    createComment(newComment);
+    saveComments();  // Save to localStorage
+    newCommentInput.value = ""; // Clear input field
+}
+
+// Function to like a comment
+function likeComment(commentId) {
+    const comment = comments.find(c => c.id === commentId);
+    comment.likes++;
+    const commentDiv = document.getElementById(`comment-${commentId}`);
+    commentDiv.querySelector(".like").textContent = `👍 ${comment.likes}`;
+    saveComments();  // Update localStorage
+}
+
+// Function to delete a comment
+function deleteComment(commentId) {
+    const commentIndex = comments.findIndex(c => c.id === commentId);
+    comments.splice(commentIndex, 1);
+    
+    const commentDiv = document.getElementById(`comment-${commentId}`);
+    commentDiv.remove();
+    saveComments();  // Update localStorage
+}
+
+// Toggle the reply box visibility
+function toggleReplyBox(commentId) {
+    const replyBox = document.querySelector(`#comment-${commentId} .reply-box`);
+    replyBox.style.display = (replyBox.style.display === "none" || replyBox.style.display === "") ? "block" : "none";
+}
+
+// Function to post a reply to a comment
+function postReply(commentId, replyText) {
+    if (replyText.trim() === "") return;
+
+    const replyComment = {
+        id: Date.now(),
+        text: replyText,
+        likes: 0,
+        parentId: commentId
+    };
+
+    comments.push(replyComment);
+    createComment(replyComment, true);
+    saveComments();  // Update localStorage
+}
+
+// Function to save comments to localStorage
+function saveComments() {
+    localStorage.setItem("comments", JSON.stringify(comments));
+}
+
+// Load existing comments when the page loads
+window.onload = function() {
+    comments.forEach(comment => createComment(comment));
+};
+
+// Event listener to post a new comment
+submitCommentBtn.addEventListener("click", postComment);
