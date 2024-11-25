@@ -271,3 +271,4 @@ window.onload = function() {
 
 // Event listener to post a new comment
 submitCommentBtn.addEventListener("click", postComment);
+

@@ -238,7 +238,7 @@ p {
 }
 
  a {
-  color: rgb(214, 214, 214);
+  color: rgba(227, 212, 212, 0.797);
   font-size: 10px;
   text-decoration: underline;
   
@@ -358,3 +358,4 @@ button:hover {
   margin-left: 20px;
   padding-top: 10px;
 }
+
